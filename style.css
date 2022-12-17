@@ -1,0 +1,61 @@
+.dropdown-toggle:focus .caret {
+   transform: rotate(-180deg);
+   transition: all 0.3s;
+}
+
+.text-modify {
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.dropdovn-submenu {
+   display: none;
+   padding-left: 0px;
+}
+
+.hover-ivent {
+   display: block;
+}
+
+.hover-ivent:hover .caret {
+   transform: rotate(-180deg);
+   transition: all 0.3s;
+}
+
+.hover-ivent:hover .dropdovn-submenu {
+   display: block;
+   animation-duration: 0.1s;
+   animation-name: slide-in;
+}
+
+@keyframes slide-in {
+   from {
+      transform: translateY(-300px);
+   }
+
+   to {
+      transform: translateY(0px);
+   }
+}
+
+.list-item {
+   padding: 3px 25px;
+   min-width: 160px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   list-style-type: none;
+}
+
+.list-item:hover {
+   background-color: #eee;
+}
+
+.list-item__link {
+   color: #333;
+   font-size: 14px;
+}
+
+.list-item__link:hover {
+   color: #333;
+
+}

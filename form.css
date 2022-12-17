@@ -1,0 +1,121 @@
+.dropdown-form {
+   display: none;
+   position: absolute;
+   width: 360px;
+   height: 240px;
+   background: #fff;
+   padding: 20px;
+   border: 1px solid rgb(228, 227, 227);
+   border-radius: 5px;
+   box-shadow: 10px 10px 10px rgba(238, 238, 238, 0.2), -10px -10px 10px rgba(238, 238, 238, 0.2);
+}
+
+.office-active {
+   display: block;
+}
+
+.office-active:hover .dropdown-form {
+   display: block;
+   animation-duration: 0.3s;
+   animation-name: slide-left;
+}
+
+@keyframes slide-left {
+   from {
+      transform: translateX(-3000px);
+   }
+
+   to {
+      transform: translateX(0px);
+   }
+}
+
+.dropdown-form__menu {
+   display: flex;
+}
+
+.menu-item a {
+   font-size: 16px;
+   font-weight: 500;
+   color: rgb(73, 174, 237);
+   text-decoration: none;
+}
+
+.menu-item:last-child {
+   margin-left: 5px;
+}
+
+.menu-item:hover {
+   font-weight: 600;
+   border-bottom: 1px dashed rgb(73, 174, 237);
+}
+
+.menu-item:hover a {
+   font-weight: 600;
+}
+
+.dropdown-form__body {
+   margin-top: 15px;
+}
+
+
+.dropdown-form__lable,
+.dropdown-form__placeholder {
+   justify-content: space-between;
+}
+
+.dropdown-form__placeholder {
+   margin-top: 10px;
+}
+
+.dropdown-form__required {
+   margin-top: 20px;
+}
+
+.dropdown-form__lable,
+.dropdown-form__placeholder,
+.dropdown-form__required {
+   display: flex;
+   align-items: center;
+}
+
+.dropdown-form__text {
+   font-size: 14px;
+}
+
+.dropdown-form__lable input,
+.dropdown-form__placeholder input {
+   display: block;
+   height: 45px;
+   width: 220px;
+   padding: 5px 15px;
+   border: 1px solid rgb(228, 227, 227);
+   border-radius: 10px;
+   color: #333;
+   font-size: 14px;
+   font-weight: bold;
+   outline: none;
+}
+
+.dropdown-form__required input[type=checkbox] {
+   display: none;
+}
+
+.dropdown-form__required label:after {
+   content: '';
+   display: block;
+   height: 14px;
+   width: 14px;
+   outline: 1px solid rgb(228, 227, 227);
+   position: absolute;
+   top: 180px;
+   left: 120px;
+}
+
+.dropdown-form__required input[type=checkbox]:checked+label:after {
+   outline: 1px solid rgb(228, 227, 227);
+   border: 2px solid rgb(228, 227, 227);
+   width: 14px;
+   height: 14px;
+   background-color: rgb(73, 174, 237);
+}
